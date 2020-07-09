@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+
+	
+
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>h i Pixel Art  —  Pixel Art Maker</title>
+        <meta name='description' content='Editable online pixel art of h i. Description:Everything you need to know about Oliver:
+He's Four foot 11, 99 ATK, 1,000 HP, he's kind and doesn't want to start conflict, Age: 11
+Shaded by Goopi. This is a h i pixel art template which you can edit.'>        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/main.css">
+		<link rel="stylesheet" href="/css/editor.css">
+        <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+		
+		<!--=====================================
+		                   INTRO
+		======================================-->
+        <div style="position:relative; top:-2000px;">
+			<div class="page-title">
+				<img class="logo" src="/img/main-logo.png" alt="Pixel Art Maker" />
+			</div>
+			<div style="width:700px; margin: 0 auto; text-align:center;">
+				<h1>h i Pixel Art</h1>
+				<p>This is a simple online pixel art editor to help you make pixel art easily. <strong>Pixel Art Maker</strong> (PAM) is designed for beginners, and pros who just want to whip something up and share it with friends. If you like making pixel art, and need an online drawing app like this, then hopefully it lives up to your expectations.</p>
+				<p>If you’re a pixel art creator and would like to have a bit more control over your drawings, then you might find tools like Photoshop useful as an alternative to this online pixel art program.</p>
+				<h2>Make Pixel Art Online: No downloads!</h2>
+				<p>You’ve probably stumbled across this online app in your quest to find a freeware pixel editor which lets you easily draw pixel art for free. This pixel art maker lets you do exactly that. You can get straight to work drawing your favourite characters like mario, goku, batman and sonic.</p>
+				<p>There are a few other pixel art programs on the internet, but they mostly use Flash rather than JavaScript. This tool uses HTML5 and JavaScript so that you get a smooth experience, and don’t need plugins. In any case, it’s worth doing a Google search to check out the other pixel art tools since they might suit your needs better.</p>
+				<p>There are benefits and disavantages of making pixel art on a website. The primary benefit is that it’s really easy to get started since there’s no need to download software onto your computer. Instead, you visit this website and can instantly start drawing pixels. There are some disadvantages to drawing pixel art online, though. For example, you need to have an internet connection, and also, websites are inherently slower than software which runs on your computer. That said, the convenience of being able to create pixel are in your browser may just make it worthwhile, at least for sketching and having fun.</p>
+				<h2>Pixel Art Editor: Create and use templates!</h2>
+				<p>As well as being able to create pixel art from scratch, you can also edit pixel are that others have created. You can create a pixel art template which others can use to create characters and avatars easily. To do this, you simply need to start drawing your pixel art, and when you’re finished, click the save button, give your art a name and description, and then click the submit button. This will give you a link which other people can use to edit your pixel art.</p>
+				<h2>Pixel Art History</h2>
+				<p><a href="https://en.wikipedia.org/wiki/Pixel_art">Pixel art</a>, as it is known today, goes back at least as far as 1972 when Richard Shoup wrote SuperPaint and with the Xerox PARC software. However, the concept of pixel art may go back thousands of years with traditional art forms such as cross-stitching (or more generally, <a href="https://en.wikipedia.org/wiki/Counted-thread_embroidery">counted-thread embroidery</a>) which uses small units which can be filled with thread to create a pattern or “drawing” of sorts. The painting style known as &quot;<a href="https://en.wikipedia.org/wiki/Pointillism">pointillism</a>&quot; is also very similar to pixel art.</p>
+				<p>Pixel images were originally the only type of image which could be displayed on computers due to resolution constraints. Their colour values were also restricted to a small subset of the colours used on computers today. After black and white came 8-bit colour, leading to the distinctive 8-bit pixel art that we know today. Due to these constraints, all early <a href="https://en.wikipedia.org/wiki/Video_games">computer games</a> had to use pixel art for their visual elements. Of course, as screen resolution increased and computing power became better, the pixellated quality of game art assets became less visible.</p>
+				<p>Presently, there are still many games which employ a pixel art style. These are usually indie games, or games where a pixel art style makes the game more visually appealing. People who draw and paint pixel art are (predictably) called <a href="https://en.wikipedia.org/wiki/Pixel_artist">pixel artists</a>.</p>
+				<p>Professional pixel artists generally use expensive software like Adobe Photoshop to create their art and sprites, but of course, this is not necessary for a beginner. Online pixel art apps like this one allow you to create pixel art on a simple grid and instantly share it with friends.</p>
+				<h2>Pixel Art Creators</h2>
+				<p>This app is built for beginners who want to learn to create pixel art, but don’t know where to start. I hope the controls are intuitive and simple, and I hope that it helps you create images which you can be proud of. So, what are you waiting for? Start creating pixel art online now, and share your pixel pictures with your friends.</p>
+			</div>
+		</div>
+		
+		
+		<!--=====================================
+		                   CANVAS
+		======================================-->
+		<canvas class="main" width="800" height="800"></canvas>
+		<canvas class="grid" width="800" height="800"></canvas>
+		<canvas class="tools" width="800" height="800"></canvas>
+		
+		<!-- Helpers -->
+		<canvas class="save" style="display:none;" width="800" height="800"></canvas>
+		
+		<!--=====================================
+		                   MENU
+		======================================-->
+		<div class="menu-bar-outer">
+			<div class="menu-bar">
+				<div class="item menu-toggle-button"  title="Hide menu" onclick="editor.toggleMenu();"><img class="icon" src="/img/icons/up-arrow-icon-white.png" alt=""/></div>
+				<div class="item marquee-button"  title="Marquee/Select tool" onclick="editor.changeTool('marquee');"><img class="icon" src="/img/icons/marquee-icon-white.png" alt=""/><div class="tint"></div></div>
+				<div class="item pen-button"  title="Pen tool (P)" onclick="editor.changeTool('pen');"><img class="icon" src="/img/icons/pen-icon-white.png" alt=""/><div class="tint" style="display:block;"></div></div>
+				<div class="item line-button"  title="Straight line tool (L)" onclick="editor.changeTool('line');"><img class="icon" src="/img/icons/line-icon-white.png" alt=""/><div class="tint"></div></div>
+				<div class="item bucket-button"  title="Fill tool (F)" onclick="editor.changeTool('bucket');"><img class="icon" src="/img/icons/bucket-icon-white.png" alt=""/><div class="tint"></div></div>
+				<div class="item eraser-button"  title="Eraser (E)" onclick="editor.changeTool('eraser');"><img class="icon" src="/img/icons/eraser-icon-white.png" alt=""/><div class="tint"></div></div>
+				<div class="item palette-button"  title="Change colour">
+					<input id="color-picker" class="color" value="1EC7FA" spellcheck="false">
+					<!--<img class="icon" src="img/icons/palette-icon-white.png" alt=""/>-->
+				</div>
+				<div class="item eyedropper-button"  title="Sample colour (S)" onclick="editor.changeTool('eyedropper');"><img class="icon" src="/img/icons/eyedropper-icon-white.png" alt=""/><div class="tint"></div></div>
+				<div class="item save-button" title="Save as PNG"><img class="icon" src="/img/icons/save-icon-white.png" alt=""/><div class="tint"></div></div>
+				<div class="item grid-button" title="Toggle grid"><img class="icon" src="/img/icons/grid-icon-white.png" alt=""/></div>
+				<div class="item clearcanvas-button" title="Clear the canvas"><img class="icon" src="/img/icons/cleancanvas-icon-white.png" alt=""/></div>
+				<div class="item undo-button" title="Undo last action (CTRL + Z)"><img class="icon" src="/img/icons/undo-icon-white.png" alt=""/></div>
+				<!--<div class="item transparency-button" title="Toggle transparent background"><img class="icon" src="img/icons/transparency-icon-white.png" alt=""/></div>
+				-->
+				<!--<div class="item transparency-button" title="Transparent background" onclick="editor.transparentBG();"><img class="icon" src="img/icons/transparency-icon-white.png" alt=""/></div>
+				-->
+			</div>
+		</div>
+		
+		
+		
+		
+		<!--=====================================
+		                   OTHER
+		======================================-->
+		<div class="save-window">
+			<div class="save-window-wrap">
+				<img id="save-art-close-button" class="hover-opacity-change" src="/img/close-cross.png" alt="" />
+
+				<p class="title">Save Your Pixels!</p>
+				<div class="center details">
+					<label>Title:<br/><input class="full-width" type="text" id="save-art-title" value="h i" /></label><br/>
+					<label>Description:<br/><textarea class="full-width" id="save-art-desc" placeholder="What's this piece for? What's it about? Feel free to include links.">Everything you need to know about Oliver:
+He's Four foot 11, 99 ATK, 1,000 HP, he's kind and doesn't want to start conflict, Age: 11
+Shaded by Goopi</textarea></label><br/>
+					<label class="pixel-size">Size of each pixel: <input id="custom-pixel-size" type="text" value="10" /> <span>px</span></label><br/>
+					<label><input style="display:inline-block;" id="save-art-private" type="checkbox" name="is_private" value="0"><span style="margin-left: 6px; position:relative; top: -1px; font-weight: normal;">Private (will not be listed in the gallery)</span></label><br/>
+					<button id="save-art-submit-button">Save</button>
+				</div>
+				<p class="loader" style="display:none; text-align:center; margin-top:100px; font-weight:bold;">Saving in progress...</p>
+				<div class="saved-output" style="display:none; text-align:center; margin-top:100px;">
+					<b>Here's the link to your saved art:</b><br/>
+					<a class="save-link" href="#" target="_blank">Error: Link not loaded</a></p>
+					<br/>
+					<a id="data-url-save-link" href="" download="PixelArt">download PNG image file</a>
+					<p style="margin-top: 0.2em;">(if it saves as a <b>.txt</b> file, rename it to <b>.png</b>)</p>
+					<p style="margin-top: 1em;">You can now <a id="zazzle-link" target="_blank" href="#"><b>buy stickers</b></a> and <a id="zazzle-link-mug" target="_blank" href="#"><b>mugs</b></a> with your pixel art on them! Click those links to see previews :)</p>
+				</div>
+				<!--<div class="center output">
+					<img id="saved-image-output" src="" alt="Your Pixel Art!" /><br/>
+					<a id="download-image-link" href="" download="MyPixelArt">download PNG</a><br/>
+					<a id="download-pixel-array" href="" download="MyPixelArt">download PAM file (for future editing)</a><br/>
+					<a id="share-reddit-link" target="_blank" href="http://www.reddit.com/r/pixelart/submit?url=http%3A%2F%2Fpixelartmaker.com%2Fart%2FLOADING%2F&title=My%20Pixel%20Art%20:)">share your art on the /r/pixelart subreddit</a><br/>
+					<a id="direct-image-url" target="_blank" href="http://pixelartmaker.com/art/LOADING...">go to image url</a>
+				</div>-->
+					
+			</div>
+			<div class="save-art-window-shadow"></div>
+		</div>
+		<style>
+			.save-window .pixel-size input {
+				display: inline-block;
+				width: 45px;
+				margin: 0;
+				height: 19px;
+				font-size: 18px;
+				text-align: center;
+				margin-bottom: 10px;
+			}
+			.save-window .pixel-size span {
+				font-size: 14px;
+				line-height: 16px;
+			}
+			.save-window .output {
+				text-align:center;
+			}
+			.save-window .output img {
+				max-width:400px;
+				max-height:200px;
+				display:block;
+				margin:0 auto;
+			}
+			.save-window .details {
+				
+			}
+			.save-window {
+				display:none;
+				z-index: 200;
+				position: fixed;
+				top:0; left:0;
+				width:100%;
+				height:100%;
+			}
+
+			.save-window-wrap .title {
+				margin:0px;
+				margin-bottom: 40px;
+				text-align:center;
+				font-weight:bold;
+				font-family: 'Merriweather', serif;
+				font-size: 27px;
+			}
+
+			.save-window-wrap .center {
+				width: 400px;
+				margin: 0 auto;
+			}
+
+			#save-art-close-button {
+				position:absolute;
+				right:10px; top:10px;
+				cursor:pointer;
+			}
+
+			.save-window-wrap {
+				padding: 30px;
+			}
+
+			.save-window-wrap label {
+				vertical-align:top;
+				font-family: 'Open Sans', sans-serif;
+				font-size: 17px;
+				
+			}
+
+			.save-window-wrap textarea, .save-window-wrap input.full-width {
+				width: 100%;
+				font-size: 22px;
+				font-family: 'Merriweather', serif;
+				margin-bottom: 20px;
+				border: 1px solid #bbbbbb;
+			}
+			 .save-window-wrap input[type='checkbox'] {
+				
+			}
+
+			.save-window-wrap textarea {
+				height: 120px;
+				font-family: 'Merriweather', serif;
+				margin-bottom:10px;
+			}
+
+			.save-window-wrap label {
+				font-weight: bold;
+			}
+
+			#save-art-submit-button {
+				display:block;
+				margin: 20px auto 0 auto;
+			}
+
+			.save-art-window-shadow {
+				opacity: 0.2;
+				background: #000000;
+				z-index:90;
+				width:100%;
+				height:100%;
+				position:absolute;
+				top:0; left:0;
+			}
+
+			.save-window-wrap {
+				z-index:100;
+				background: #ffffff;
+				width: 435px;
+				height: 420px;
+				overflow: auto;
+				margin: auto;
+				position: absolute;
+				top: 0; left: 0; bottom: 0; right: 0;
+				border-radius: 2px;
+				box-shadow: 0px 2px 10px #888888;
+			}
+		</style>
+		
+		<!-- BOTTOM-RIGHT TEXT MESSAGE -->
+		<div style="position:absolute; bottom:5px; right: 5px; display:inline-block; width:auto;z-index: 3005;">
+			<!--<p style="margin:0;font-size:15px;font-weight:bold;background:#ffffff;"><a style="text-decoration:none;" href="http://pixelartmaker.com/gallery" target="_blank">Visit the gallery</a> or <a style="text-decoration:none;" href="http://upli.st/l/Feature-Requests-for-Pixel-Art-Maker" target="_blank">request a feature</a> or <a style="text-decoration:none;" href="http://upli.st/l/Pixel-Art-Maker-Bug-Reports" target="_blank">here to report a bug</a>.</p>-->
+			<p style="margin:0;font-size:15px;font-weight:bold;background:#ffffff;"><a style="text-decoration:none;" href="http://pixelartmaker.com/gallery" target="_blank">visit the gallery</a> or <a style="text-decoration:none;" href="https://perchance.org" target="_blank">create a random text generator</a> or <a onclick="this.parentElement.style.display='none'" style="text-decoration:none;" href="#">close this message</a></p>
+		</div>
+			
+		<div style="display:none;">
+			<img class="icon" src="/img/icons/up-arrow-icon-white.png" alt=""/>
+			<img class="icon" src="/img/icons/pam-icon-white.png" alt=""/>
+		</div>
+		
+		<script>
+			//this gets read by the editor object and put in this.loading_offshoot
+			var loading_offshoot = true;		</script>
+		
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script type="text/javascript" src="/jscolor/jscolor.js"></script>
+		<script src="/js/plugins.js"></script>
+		<script src="/js/lz-string-1.3.3-min.js"></script>
+        <script src="/js/main.js"></script>
+		<script src="/js/editor.js?v=kwebviw"></script>
+		
+		<script>
+			var parent_unique_name = '';
+			if(editor.loading_offshoot && !confirm("WARNING: You are about to start an offshoot, but this will override all the pixels that were previously on your canvas. Please click CANCEL to load your previous pixels so that you can save them, or if you have already saved them (or you don't care about them), then click 'Okay' to proceed with creating your offshoot.")) {
+				editor.loadFromLocalStorage();
+			} else {
+				//offshoot code appears here when they are loading offshoot
+				editor.pixelArray = $.parseJSON(LZString.decompressFromBase64('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'));editor.renderAll();parent_unique_name = '15115e324bc41c0';			}
+		</script>
+		
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-36798824-8', 'pixelartmaker.com');
+		  ga('send', 'pageview');
+
+		</script>
+    
+<div style="position:absolute; left:-8000px; top:-8000px;">
+  <p>Here's a list of the sites that I'm currently working on:</p>
+  <ul>
+    <li><a href="http://countwordsworth.org">count words</a>worth is a website helps you count words, sentences, verbs, cliches, etc. in your writing.<li/>
+    <li><a href="http://reversedictionary.org">reverse dictionary</a> is a website that allows you to find words based on their definition. In other words, it turns sentences (or phrases) into words.<li/>
+    <li><a href="http://relatedwords.org">related words</a> helps you find similar words. Give the engine a seed word and it will find a huge list of related words. It allows you to do a broader search than a thesaurus allows.<li/>
+    <li><a href="http://describingwords.io">describing words</a> allows you to find adjectives or describing phrases and words for a particular noun or noun phrase. It helps you find inspiration for describing things.<li/>
+    <li><a href="http://newsongs.io">new songs</a> is an aggregation of many lists of new songs from around the internet. It inclides lists of new songs from all major genres from hip-hop to classical and everything in between.<li/>
+    <li><a href="http://fbemojis.com">facebook emojis</a> is simply a giant list of emojis that can be used on facebook. It is also searchable, so you can quickly find what you're looking for.<li/>
+    <li><a href="http://urbanthesaurus.org">urban thesaurus</a> is a thesaurus for slang words. If you're looking for synonyms of a slang word, this website will help you out.<li/>
+    <li><a href="http://wordtype.org">word type</a> is a simple tool to query the part-of-speech of a word.<li/>
+  </ul>
+</div>
+
+    
+    </body>
+</html>
